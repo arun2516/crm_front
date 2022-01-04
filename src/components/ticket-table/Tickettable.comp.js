@@ -1,7 +1,9 @@
 import React from 'react'
 import {Table} from 'react-bootstrap'
+import  PropTypes  from 'prop-types'
 
 export const Tickettable = ({tickets}) => {
+    
     return (
         <Table striped bordered hover>
 
@@ -36,4 +38,8 @@ export const Tickettable = ({tickets}) => {
 
         </Table>
     )
+}
+
+Tickettable.propTypes={
+    tickets:PropTypes.array.isRequired,
 }
