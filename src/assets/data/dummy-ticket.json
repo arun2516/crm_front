@@ -3,7 +3,27 @@
         "id":1,
         "subject":"key issue",
         "status":"client response pending",
-        "addedAt":"2020-10-12"
+        "addedAt":"2020-10-12",
+        "history":[
+            {
+                "date":"2020-10-12",
+                "message":"ahxbisbxknc knd cc ldc oov  oj b ocv",
+                "messageby":"client"
+            },
+            {
+                "date":"2020-10-12",
+                "message":"ddkjbvcddccd dcljd kdsn jbd d ndjn",
+                "messageby":"operator"
+            },{
+                "date":"2020-10-12",
+                "message":"dknc kndscdcm dc kmd kjdj  kj kj  dsx",
+                "messageby":"client"
+            },{
+                "date":"2020-10-12",
+                "message":"csaacxssnc sknccmc m cjdjbc kjbcbidb",
+                "messageby":"operator"
+            }
+        ]
     },
     {
         "id":2,
