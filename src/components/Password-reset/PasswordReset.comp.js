@@ -10,13 +10,14 @@ export const Resetpass = ( { handleOnChange, email, formswitcher, handleOnResetS
                 <h1 className='text-info text-center'>Reset Password</h1>
                 <hr/>
                 <Form autoComplete='off' onSubmit={handleOnResetSubmit}>
-                    <Form.Group>
+                    <Form.Group className="mb-3">
                         <Form.Label>Email Address</Form.Label>
                         <Form.Control type='email' 
                         name="email" placeholder='Enter Email'  onChange={handleOnChange} value={email} required/>
                     </Form.Group>
-                   
+                   <div className="mb-3">
                     <Button type='submit'>Reset Password</Button>
+                    </div>
                     </Form>
                     <hr/>
                 </Col>
