@@ -5,15 +5,25 @@ import tickets from "../../assets/data/dummy-ticket.json"
 import { Messagehistory } from '../../components/message-history/Messagehistory.comp';
 import { Updateticket } from '../../components/updateticket/Updateticket.comp';
 import { useState, useEffect } from 'react';
-
-const ticket = tickets[0];
+import { Defaultlayout } from '../../components/layout/Defaultlayout';
+import {useParams} from 'react-router-dom'
+// const ticket = tickets[0];
 
 export const Ticket = () => {
+   
+    const {tid} = useParams()
+
     const[message,setmessage]=useState("")
+    const[ticket,setticket] = useState("")
 
     useEffect(() => {
-      
-    }, [message])
+      for(let i=0;i<tickets.length;i++){
+          if(tickets[i].id == tid){
+              setticket(tickets[i]);
+              continue;
+          }
+      }
+    }, [message,tid]);
 
     const handlingOnChange=e=>{
         setmessage(e.target.value);
@@ -24,6 +34,7 @@ export const Ticket = () => {
     }
 
     return (
+        <Defaultlayout>
         <Container>
 
             <Row>
@@ -57,5 +68,6 @@ export const Ticket = () => {
 
            
         </Container>
+        </Defaultlayout>
     )
 }

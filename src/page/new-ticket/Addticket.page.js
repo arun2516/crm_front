@@ -3,6 +3,7 @@ import {Container,Row,Col} from 'react-bootstrap'
 import { Addticketform } from '../../components/add-ticket-form/Addticketform.comp'
 import { Breadcrum } from '../../components/breadcrum/Breadcrum'
 import { useState,useEffect } from 'react'
+import { Defaultlayout } from '../../components/layout/Defaultlayout'
 // import { shorttext } from '../../utils/Validation'
 const initialfrmdt={
     subject:"",
@@ -46,6 +47,7 @@ export const Addticket = () => {
 
 
     return (
+        <Defaultlayout>
         <Container>
             <Row>
                 <Col>
@@ -58,6 +60,8 @@ export const Addticket = () => {
                 </Col>
             </Row>
             
+            
         </Container>
+        </Defaultlayout>
     )
 }

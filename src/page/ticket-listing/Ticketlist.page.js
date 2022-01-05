@@ -5,8 +5,15 @@ import { Searchform } from '../../components/search-form/Searchform.comp'
 import { useState,useEffect } from 'react'
 import { Tickettable } from '../../components/ticket-table/Tickettable.comp'
 import tickets from "../../assets/data/dummy-ticket.json"
+import { Defaultlayout } from '../../components/layout/Defaultlayout'
+import{useNavigate} from "react-router-dom"
 
 export const Ticketlist = () => {
+    const navigate= useNavigate();
+    
+    const addticket = ()=>{
+        navigate("/add-ticket");
+    }
      const[str,setstr] = useState("");
      const[dispticket,setdispticket] = useState(tickets);
     
@@ -24,6 +31,7 @@ export const Ticketlist = () => {
     }
 
     return (
+        <Defaultlayout>
         <Container>
             <Row>
                 <Col>
@@ -33,7 +41,7 @@ export const Ticketlist = () => {
 
             <Row className='mt-4'>
                 <Col>
-                <Button variant="info " >Add New Ticket</Button>
+                <Button variant="info " onClick={addticket} >Add New Ticket</Button>
                 </Col>
             </Row>
 
@@ -51,5 +59,6 @@ export const Ticketlist = () => {
             </Row>
             
         </Container>
+        </Defaultlayout>
     )
 }
